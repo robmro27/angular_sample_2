@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .test1 {
+            position:relative;
+            margin-top:100px;
+        }
+        .test2 {
+            transition: all linear 1.0s;
+            background-color: lightblue;
+            height: 100px;
+            width: 100%;
+            position:absolute;
+            top: 0;
+            left: 0;
+            color: red;
+        }
+
+        .ng-hide {
+            transition: all linear 1.0s;
+            height: 0;
+            width: 0;
+            background-color: transparent;
+            top:0px;
+            left: 0px;
+            color: rgba(0, 0, 0, 0);
+        }
+    </style>
+    
+    <script src="./jquery-2.1.1.js"></script>
+    <script src="./bootstrap.js"></script>
+    <script src="./angular.js"></script>
+    <script src="./angular-animate.js"></script>
+    
+    <body>
+        
+        <h1>Hide the DIV:</h1>
+    
+        <div ng-app="ngAnimate">
+            <button ng-click="toggle = !toggle">
+                Toggle!
+            </button>
+            
+            <div class="test1">
+                <div class="test2" ng-show="toggle">
+                    <p>test</p>
+                </div>
+            </div>
+            
+            <button ng-click="toggle1 = !toggle1">
+                Toggle!
+            </button>
+            
+            <div class="test1">
+                <div class="test2" ng-show="toggle1">
+                    <p>test</p>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        
+    </body>
+</html>
